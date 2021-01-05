@@ -9,8 +9,6 @@ import {
 import LoginKdh from './pages/donghakim/login/login';
 import MainKdh from './pages/donghakim/main/main';
 
-
-
 // 새봄's 컴포넌트
 import LoginLsb from './pages/saebomlee/login/login';
 import MainLsb from './pages/saebomlee/main/main';
@@ -21,11 +19,11 @@ import MainYhi from './pages/hoicyoo/main/main';
 
 // 필제's 컴포넌트
 import LoginLpj from './pages/piljelee/login/login';
-import MainLpj from './pages/piljelee/main/main;
+import MainLpj from './pages/piljelee/main/main';
 
 // 희진's 컴포넌트
 import LoginKhj from './pages/heejinkim/login/login';
-import MainKhj from './pages/heejinkim/main/main;
+import MainKhj from './pages/heejinkim/main/main';
 
 
 // import 각 경로
@@ -49,3 +47,6 @@ class Routes extends React.Component {
     );
   }
 }
+
+
+export default Routes;
