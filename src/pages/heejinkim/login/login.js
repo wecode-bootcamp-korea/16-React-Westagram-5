@@ -12,6 +12,7 @@ class Login extends React.Component {
         this.state = {
           idValue : '',
           pwValue : '',
+          ChangeBtn:""
         }
       } 
 
@@ -33,7 +34,7 @@ class Login extends React.Component {
 
     render() {
 
-        const changeBtn = (this.state.idValue.length && this.state.pwValue.length) !== 0;
+        const changeBtn = (this.state.idValue.length > 5 && this.state.idValue.includes("@") && this.state.pwValue.length > 5);
 
         return (
         <div class="main-box">
