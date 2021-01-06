@@ -1,12 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 %flexCenter {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 // sass 파일에서
 @impoprt '../common.scss'
 
 .logo {
-	@extend %flexCenter
+    @extend %flexCenter;
 }
+
+$Lightblue: #0095f6;
+$deepBlue: #3b5999;
+$bgGrey: #fafafa;
+$bgWhite: #ffffff;
+$borderColor: #bdbdbd;
