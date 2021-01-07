@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+main {
+  display: flex;
+  background-color: #fafafa;
+  article {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 100px;
+    height: 700px;
+    background-color: #ffffff;
+    .picture {
+      padding: 20px;
+      width: 650px;
+    }
+    .feed_entry {
+      position: relative;
+      .input_feed {
+        width: 99%;
+        height: 40px;
+        border: 1px solid #fafafa;
+      }
+      .input_btn {
+        position: absolute;
+        top: 15px;
+        right: 70px;
+        background-color: #ffffff;
+        border: none;
+      }
+    }
+  }
+  .main-right {
+  }
+}
