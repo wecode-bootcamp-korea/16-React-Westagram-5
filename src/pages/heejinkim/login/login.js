@@ -1,4 +1,5 @@
 import React from 'react'; 
+import {SIGNUP_API, SIGNIN_API } from '../config'
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import "../login/login.scss";
@@ -11,29 +12,34 @@ class Login extends React.Component {
         super(props);
         this.state = {
           idValue : '',
-          pwValue : '',
-          ChangeBtn:""
+          pwValue : ''
         }
-      } 
+      }  
 
     goToMain = () => {
-        this.props.history.push('/Main');
+        this.props.history.push('/main-heejinkim');
     }
     
-    handleIdValue = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
-    };
-    
-    handlePwValue = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
-    };
+    handleInput = (e) => {
+        const { value, name } = e.target;
+        this.setState ({[name] : value})
+
+    }
+    handleButton = () => {
+        fetch(SIGNUP_API, {
+            method: "POST",
+            body: JSON.stringify({
+                email: this.state.idValue,
+                password: this.state.pwValue
+            }),
+        })
+            .then(response => response.json())
+            .then(result => {
+                console.log({result});
+            })
+    }
 
     render() {
-
         const changeBtn = (this.state.idValue.length > 5 && this.state.idValue.includes("@") && this.state.pwValue.length > 5);
 
         return (
@@ -45,18 +51,18 @@ class Login extends React.Component {
                         type="text"
                         name="idValue"
                         value={this.state.idValue}
-                        onChange={(e) => this. handleIdValue(e) }
+                        onChange={(e) => this. handleInput(e) }
                         placeholder="전화번호, 사용자 이름 또는 이메일" />
                     <input 
                         type={this.state.showPw ? "text" : "password"}
                         name='pwValue'
                         value={this.state.pwValue}
-                        onChange={(e) => this.handlePwValue(e)}
+                        onChange={(e) => this.handleInput(e)}
                         placeholder="비밀번호" />               
                     <Link to="/main-heejinkim">
-                        <button className={`${changeBtn ? 'changecolor' : ''}`} >Link 로그인</button>
+                        <button className={`${changeBtn ? 'changecolor' : ''}`} onClick={this.handleButton}>Link 로그인</button>
                     </Link>
-                    <button className="js-btn" onClick={this.goToMain}>withRouter 로그인</button>   
+                    <button className={`${changeBtn ? 'changecolor' : ''}`} onClick={this.goToMain} >withRouter 로그인</button>   
                 </form>    
                 <a href="#">비밀번호를 잊으셨나요?</a>
             </div>
