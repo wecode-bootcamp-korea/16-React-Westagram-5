@@ -1,4 +1,4 @@
-%flexCenter {
+/*%flexCenter {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -9,4 +9,6 @@
 
 .logo {
 	@extend %flexCenter
-}
+}*/
+
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");

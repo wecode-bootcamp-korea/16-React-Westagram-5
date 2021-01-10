@@ -1,0 +1,28 @@
+{
+  "commentdata" : [
+    {
+      "id": 1,
+      "username" : "user1",
+      "commenttxt": "첫번째 댓글",
+      "isLiked":true
+    },
+    {
+      "id": 2,
+      "username" : "user2",
+      "commenttxt": "?????????????????????????????????",
+      "isLiked":false
+    },
+    {
+      "id": 3,
+      "username" : "user3",
+      "commenttxt": "세번째 댓글",
+      "isLiked":false
+    },
+    {
+      "id": 4,
+      "username" : "user4",
+      "commenttxt": "네번째 댓글",
+      "isLiked":true
+    }
+  ]
+}
