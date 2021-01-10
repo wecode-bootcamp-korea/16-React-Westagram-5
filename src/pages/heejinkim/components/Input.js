@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import './Feed.scss'
 
-export default class Feed extends Component {
+export default class Input extends Component {
     render() {
         return (
             <div></div>
